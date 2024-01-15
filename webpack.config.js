@@ -8,7 +8,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Output Management',
       filename: '/views/index.html',
-      template: __dirname + '/views/index.html' })
+      template: path.join(__dirname, 'views/index.html')
+    })
   ],
   output: {
     path: path.join(__dirname, 'dist'),
