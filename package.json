@@ -10,8 +10,9 @@
   },
   "main": "server.js",
   "scripts": {
+    "build": "webpack",
     "start": "node server.js",
-    "startdev": "nodemon index.js",
+    "startdev": "nodemon server.js",
     "eslint": "eslint ./",
     "eslint-fix": "eslint ./ --fix"
   },
@@ -21,6 +22,8 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.1.1",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.0.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }
