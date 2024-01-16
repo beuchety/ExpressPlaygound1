@@ -1,18 +1,22 @@
 #!/bin/bash
 
+CONFIG_DIR=./.amplify-hosting
+
 echo "removing ./.amplify-hosting dir"
-rm -rf ./.amplify-hosting
+rm -rf $CONFIG_DIR
 
 echo "create computer dir"
-mkdir -p ./.amplify-hosting/compute
+mkdir -p $CONFIG_DIR/compute
 
 echo "copy dist dir"
 cp -r ./dist ./.amplify-hosting/compute/default
 echo "copy node_modules"
-cp -r ./node_modules ./.amplify-hosting/compute/default/node_modules
+cp -r ./node_modules $CONFIG_DIR/compute/default/node_modules
+
+cp -r ./views $CONFIG_DIR/compute/default/views
 
 echo "copy public dir"
-cp -r public ./.amplify-hosting/static
+cp -r public $CONFIG_DIR/static
 
 echo "copy deploy-manifest"
-cp deploy-manifest.json ./.amplify-hosting/deploy-manifest.json
+cp deploy-manifest.json $CONFIG_DIR/deploy-manifest.json

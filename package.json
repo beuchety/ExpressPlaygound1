@@ -14,16 +14,13 @@
     "start": "ts-node src/index.ts",
     "startdev": "nodemon index.ts",
     "serve": "node dist/index.js",
-    "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
+    "postbuild": "chmod +x bin/postbuild.sh && bash ./bin/postbuild.sh"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.3",
-    "html-webpack-plugin": "^5.6.0",
     "nodemon": "^3.0.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "typescript": "^5.3.3"
   }
 }
