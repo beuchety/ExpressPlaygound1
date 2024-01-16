@@ -16,7 +16,7 @@ cp -r ./node_modules $CONFIG_DIR/compute/default/node_modules
 cp -r ./views $CONFIG_DIR/compute/default/views
 
 echo "copy public dir"
-cp -r public $CONFIG_DIR/static
+cp -r public $CONFIG_DIR/public
 
 echo "copy deploy-manifest"
 cp deploy-manifest.json $CONFIG_DIR/deploy-manifest.json
