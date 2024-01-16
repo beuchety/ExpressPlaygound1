@@ -4,12 +4,12 @@
  * ***************************************************/
 
 const bGround = require('fcc-express-bground')
-const myApp = require('./myApp')
+const myApp = require('../myApp')
 const express = require('express')
 const app = express()
 
 if (!process.env.DISABLE_XORIGIN) {
-  app.use((req, res, next) => {
+  app.use((req: { headers: { origin: string } }, res: { setHeader: (arg0: string, arg1: any) => void; header: (arg0: string, arg1: string) => void }, next: () => void) => {
     const allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com']
     const origin = req.headers.origin || '*'
     if (!process.env.XORIG_RESTRICT || allowedOrigins.indexOf(origin) > -1) {

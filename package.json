@@ -10,22 +10,19 @@
   },
   "main": "server.js",
   "scripts": {
-    "build": "webpack",
-    "start": "node server.js",
-    "startdev": "nodemon server.js",
-    "eslint": "eslint ./",
-    "eslint-fix": "eslint ./ --fix",
-    "serve": "node dist/server.js",
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "startdev": "nodemon index.ts",
+    "serve": "node dist/index.js",
     "postbuild": "chmod +x bin/postbuild.sh && ./bin/postbuild.sh"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.3",
     "html-webpack-plugin": "^5.6.0",
     "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
